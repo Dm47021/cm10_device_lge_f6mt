@@ -13,7 +13,7 @@ SectionVerb
 
 	# ALSA PCMs
 	PlaybackPCM 0
-	capturePCM 0
+	CapturePCM 0
 	ACDBID 0:0
 
 EndSection
@@ -25,15 +25,13 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
-		'EAR PA Gain':0:POS_6_DB
+		'EAR PA Gain':0:POS_2_DB
 		'DAC1 Switch':1:1
-		'RX1 Digital Volume':1:56
 	EndSequence
 
 	DisableSequence
 		'RX1 MIX1 INP1':0:ZERO
 		'DAC1 Switch':1:0
-		'RX1 Digital Volume':1:60
 	EndSequence
 
 	ACDBID	7:1
@@ -70,17 +68,15 @@ SectionDevice
 	Comment "Speaker Rx device"
 
 	EnableSequence
-#		'SLIM_0_RX Channels':0:Two
-		'SLIM_0_RX Channels':0:One
+		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
-#		'RX5 MIX1 INP1':0:RX2
-		'RX5 MIX1 INP1':0:RX1
+		'RX5 MIX1 INP1':0:RX2
 		'RX4 DSM MUX':0:DSM_INV
 		'RX6 DSM MUX':0:DSM_INV
-                'LINEOUT1 Volume':1:100
-                'LINEOUT2 Volume':1:100
-                'LINEOUT3 Volume':1:100
-                'LINEOUT4 Volume':1:100
+                'LINEOUT1 Volume':1:66
+                'LINEOUT2 Volume':1:66
+                'LINEOUT3 Volume':1:66
+                'LINEOUT4 Volume':1:66
 	EndSequence
 
 	DisableSequence
@@ -108,8 +104,8 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:45
-		'HPHR Volume':1:45
+		'HPHL Volume':1:80
+		'HPHR Volume':1:80
 	EndSequence
 
 	DisableSequence
@@ -135,18 +131,16 @@ SectionDevice
 		'RX5 MIX1 INP1':0:RX2
 		'RX4 DSM MUX':0:DSM_INV
 		'RX6 DSM MUX':0:DSM_INV
-                'LINEOUT1 Volume':1:55
-                'LINEOUT2 Volume':1:55
-                'LINEOUT3 Volume':1:55
-                'LINEOUT4 Volume':1:55
+                'LINEOUT1 Volume':1:66
+                'LINEOUT2 Volume':1:66
+                'LINEOUT3 Volume':1:66
+                'LINEOUT4 Volume':1:66
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'RX1 Digital Volume':1:54
-		'RX2 Digital Volume':1:54
-		'HPHL Volume':1:0
-		'HPHR Volume':1:0
+		'HPHL Volume':1:80
+		'HPHR Volume':1:80
 	EndSequence
 
 	DisableSequence
@@ -162,8 +156,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:ZERO
 		'HPHL DAC Switch':1:0
 		'HPHR DAC Switch':1:0
-		'RX1 Digital Volume':1:60
-		'RX2 Digital Volume':1:60
 		'HPHL Volume':1:0
 		'HPHR Volume':1:0
 	EndSequence
@@ -334,22 +326,23 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:60
 		'ADC1 Volume':1:100
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
 		'DEC6 MUX':0:ZERO
-		'DEC6 Volume':1:60
 		'ADC1 Volume':1:0
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	4:2
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Camcorder Tx
 SectionDevice
 	Name "Camcorder Tx"
 	Comment "Camcorder Tx device"
@@ -358,22 +351,23 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:66
 		'ADC1 Volume':1:100
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
 		'DEC6 MUX':0:ZERO
-		'DEC6 Volume':1:60
 		'ADC1 Volume':1:0
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	40:2
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Voice Recognition
 SectionDevice
 	Name "Voice Recognition"
 	Comment "Voice Recognition Tx device"
@@ -383,14 +377,16 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
 		'ADC1 Volume':1:100
-		'MICBIAS1 CAPLESS Switch':1:1
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
 		'DEC6 MUX':0:ZERO
 		'ADC1 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	41:2
@@ -403,20 +399,20 @@ SectionDevice
 
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC4
-		'DEC4 MUX':0:ADC3
-		'DEC4 Volume':1:60
-		'ADC3 Volume':1:100
+		'SLIM TX7 MUX':0:DEC1
+		'DEC1 MUX':0:DMIC1
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
-		'DEC4 MUX':0:ZERO
-		'DEC4 Volume':1:60
-		'ADC3 Volume':1:0
+		'DEC1 MUX':0:ZERO
+# 2012.03.28 donggyun.kim - capless switch disable
+#		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
-	ACDBID	4:2
+	ACDBID	11:2
 
 EndSection
 
@@ -1082,7 +1078,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1103,7 +1099,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1124,7 +1120,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1145,7 +1141,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1166,7 +1162,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1187,7 +1183,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1208,7 +1204,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1229,7 +1225,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1247,7 +1243,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 0
-	capturePCM 0
+	CapturePCM 0
 	ACDBID 0:0
 
 EndSection
@@ -1265,7 +1261,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 1
-        capturePCM 1
+        CapturePCM 1
         ACDBID 0:0
 
 EndSection
@@ -1585,7 +1581,6 @@ SectionModifier
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Camcorder Tx
 SectionModifier
 	Name "Capture MusicCamcorder Tx"
 
@@ -1604,7 +1599,6 @@ SectionModifier
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Voice Recognition
 SectionModifier
 	Name "Capture MusicVoice Recognition"
 
@@ -1754,7 +1748,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1772,7 +1766,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1790,7 +1784,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1808,7 +1802,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 2
-        capturePCM 2
+        CapturePCM 2
         ACDBID 0:0
 
 EndSection
@@ -1826,7 +1820,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1844,7 +1838,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1862,7 +1856,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1880,7 +1874,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1898,7 +1892,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1916,7 +1910,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1934,7 +1928,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1952,12 +1946,11 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Camcorder Tx
 SectionModifier
 	Name "Play VoiceCamcorder Tx"
 
@@ -1971,12 +1964,11 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Voice Recognition
 SectionModifier
 	Name "Play VoiceVoice Recognition"
 
@@ -1990,7 +1982,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2008,7 +2000,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2026,7 +2018,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2044,7 +2036,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2062,7 +2054,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2080,7 +2072,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2098,7 +2090,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2116,7 +2108,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2134,7 +2126,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2152,7 +2144,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2170,7 +2162,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2188,7 +2180,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2207,7 +2199,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2226,7 +2218,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2245,7 +2237,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2264,7 +2256,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2280,7 +2272,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2290,7 +2282,7 @@ SectionModifier
 
         # ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2308,7 +2300,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2326,7 +2318,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2344,7 +2336,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2362,7 +2354,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2380,12 +2372,11 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Camcorder Tx
 SectionModifier
 	Name "Play VOIPCamcorder Tx"
 
@@ -2399,12 +2390,11 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
 
-#CONFIG_LGE_AUDIO, youngmo.song@lge.com , add new device path for Voice Recognition
 SectionModifier
 	Name "Play VOIPVoice Recognition"
 
@@ -2418,7 +2408,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2436,7 +2426,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2454,7 +2444,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2472,7 +2462,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2490,7 +2480,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2509,7 +2499,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2528,7 +2518,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2547,7 +2537,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2566,7 +2556,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2584,7 +2574,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2602,7 +2592,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2620,7 +2610,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2638,7 +2628,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2656,7 +2646,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 0
-        capturePCM 0
+        CapturePCM 0
         ACDBID 0:0
 
 EndSection
@@ -2676,7 +2666,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 0
-        capturePCM 0
+        CapturePCM 0
         ACDBID 0:0
 
 EndSection

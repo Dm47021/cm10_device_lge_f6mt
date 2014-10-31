@@ -46,4 +46,5 @@ touch.orientation.calibration = none
 touch.distance.calibration = none
 touch.distance.scale = 1
 
-keyboard.layout = l0-keypad
+keyboard.layout = f3q-keypad
+keyboard.characterMap = f3q-keypad

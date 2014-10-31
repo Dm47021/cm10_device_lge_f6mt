@@ -2,21 +2,21 @@
 #$(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := l0
+PRODUCT_RELEASE_NAME := f6
 
-TARGET_BOOTANIMATION_NAME := vertical-320x480
+TARGET_BOOTANIMATION_NAME := 540x960
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lge/l0/device_l0.mk)
+$(call inherit-product, device/lge/f6mt/device_f6mt.mk)
 
 # Device naming
-PRODUCT_DEVICE := l0
-PRODUCT_NAME := cm_l0
+PRODUCT_DEVICE := f6mt
+PRODUCT_NAME := cm_f6mt
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-MS770
+PRODUCT_MODEL := LG-MS500
 PRODUCT_MANUFACTURER := lge
 
     CDMA_CARRIER_ALPHA := MetroPCS

@@ -13,7 +13,7 @@ SectionVerb
 
 	# ALSA PCMs
 	PlaybackPCM 0
-	capturePCM 0
+	CapturePCM 0
 	ACDBID 0:0
 
 EndSection
@@ -1078,7 +1078,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1099,7 +1099,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1120,7 +1120,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1141,7 +1141,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1162,7 +1162,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1183,7 +1183,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1204,7 +1204,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1225,7 +1225,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 5
-	capturePCM 6
+	CapturePCM 6
 	ACDBID 0:0
 
 EndSection
@@ -1243,7 +1243,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 0
-	capturePCM 0
+	CapturePCM 0
 	ACDBID 0:0
 
 EndSection
@@ -1261,7 +1261,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 1
-        capturePCM 1
+        CapturePCM 1
         ACDBID 0:0
 
 EndSection
@@ -1750,7 +1750,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1768,7 +1768,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1786,7 +1786,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1804,7 +1804,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 2
-        capturePCM 2
+        CapturePCM 2
         ACDBID 0:0
 
 EndSection
@@ -1822,7 +1822,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1840,7 +1840,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1858,7 +1858,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1876,7 +1876,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1894,7 +1894,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1912,7 +1912,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1930,7 +1930,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1948,7 +1948,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1967,7 +1967,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -1986,7 +1986,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2004,7 +2004,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2022,7 +2022,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2040,7 +2040,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2058,7 +2058,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2076,7 +2076,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2094,7 +2094,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2112,7 +2112,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2130,7 +2130,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2148,7 +2148,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2166,7 +2166,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2184,7 +2184,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2203,7 +2203,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2222,7 +2222,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2241,7 +2241,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2260,7 +2260,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2276,7 +2276,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 2
-	capturePCM 2
+	CapturePCM 2
 	ACDBID 0:0
 
 EndSection
@@ -2286,7 +2286,7 @@ SectionModifier
 
         # ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2304,7 +2304,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2322,11 +2322,12 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
 
+# 2012.03.19 cheolyong.yu@lge.com Change SectionVerb to SectionModifier
 SectionModifier
 	Name "Play VOIPHeadphones"
 
@@ -2340,7 +2341,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2358,7 +2359,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2376,7 +2377,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2395,7 +2396,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2414,7 +2415,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2432,7 +2433,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2450,7 +2451,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2468,7 +2469,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2486,7 +2487,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2505,7 +2506,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2524,7 +2525,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2543,7 +2544,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2562,7 +2563,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2580,7 +2581,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2598,7 +2599,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2616,7 +2617,7 @@ SectionModifier
 
 	# ALSA PCMs
 	PlaybackPCM 3
-	capturePCM 3
+	CapturePCM 3
 	ACDBID 0:0
 
 EndSection
@@ -2634,7 +2635,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 3
-        capturePCM 3
+        CapturePCM 3
         ACDBID 0:0
 
 EndSection
@@ -2652,7 +2653,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 0
-        capturePCM 0
+        CapturePCM 0
         ACDBID 0:0
 
 EndSection
@@ -2672,7 +2673,7 @@ SectionModifier
 
         # ALSA PCMs
         PlaybackPCM 0
-        capturePCM 0
+        CapturePCM 0
         ACDBID 0:0
 
 EndSection
