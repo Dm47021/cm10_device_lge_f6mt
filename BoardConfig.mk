@@ -28,6 +28,7 @@ TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG_MK      := device/lge/f6mt/releasetools/mkbootimg.mk
 BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=31 vmalloc=308M
 BOARD_KERNEL_BASE            := 0x80200000
 BOARD_FORCE_RAMDISK_ADDRESS  := 0x02000000
