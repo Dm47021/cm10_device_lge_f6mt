@@ -17,8 +17,8 @@
     <bool name="enableSplitSMS">true</bool>
 
     <string name="uaProfTagName">Profile</string>
-    <string name="userAgent">LG-MS770/Android-mms\u0020</string>
-    <string name="uaProfUrl">http://uaprof.metropcs.net/UAProf/LG-MS770.xml</string>
+    <string name="userAgent">LG-MS500/Android-mms\u0020</string>
+    <string name="uaProfUrl">http://uaprof.metropcs.net/UAProf/LG-MS500.xml</string>
     <!-- Setting for MetroPCS MMS -->
     <string name="httpParams">x-up-calling-line-id: 1##LINE1##|X-VzW-MDN: 1##LINE1##</string>
 
