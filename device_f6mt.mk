@@ -116,9 +116,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb
 
 # System Prop for F6MT
 PRODUCT_PROPERTY_OVERRIDES += \
+     ro.telephony.ril_class=LGEQualcommUiccRIL \
      rild.libpath=/system/lib/libril-qc-qmi-1.so \
      rild.libargs=-d /dev/smd0 \
      persist.rild.nitz_plmn= \
@@ -138,6 +141,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
      dalvik.vm.heapsize=36m \
      debug.mdpcomp.maxlayer=3 \
      debug.mdpcomp.logs=0 \
+     wifi.interface=wlan0 \
+
     
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.hdmi.enable=false \
@@ -214,6 +219,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.build.target_operator=TMO \
      ro.build.target_operator_ext=MPCS_TMO \
+     ro.telephony.default_network=9 \
      ro.build.target_country=US \
      ro.sf.lcd_density=240 \
      ime_vibration_pattern=0:20 \
@@ -224,6 +230,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
      ro.nfc.port=I2C \
      dalvik.vm.dexopt-flags=m=y \
      net.bt.name=Android
+
+# For userdebug builds
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
      
      
      
