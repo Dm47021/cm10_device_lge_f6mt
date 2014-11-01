@@ -297,6 +297,13 @@ def GetBootableImage(name, prebuilt_name, unpack_dir, tree_subdir,
   'prebuilt_name', otherwise construct it from the source files in
   'unpack_dir'/'tree_subdir'."""
 
+prebuilt_dir = os.path.join(unpack_dir, "BOOTABLE_IMAGES")
+  prebuilt_path = os.path.join(prebuilt_dir, prebuilt_name)
+  custom_bootimg_mk = os.getenv('MKBOOTIMG')
+  if custom_bootimg_mk:
+    bootimage_path = os.path.join(os.getenv('OUT'), "boot.lok")
+    os.mkdir(prebuilt_dir)
+    shutil.copyfile(bootimage_path, prebuilt_path)
   prebuilt_path = os.path.join(unpack_dir, "BOOTABLE_IMAGES", prebuilt_name)
   if os.path.exists(prebuilt_path):
     print "using prebuilt %s..." % (prebuilt_name,)
