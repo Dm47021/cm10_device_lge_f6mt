@@ -103,4 +103,4 @@ TARGET_BOOTANIMATION_PRELOAD := true
 
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/lge/f6mt/releasetools/ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/lge/f6mt/releasetools/f6mt_ota_from_target_files
