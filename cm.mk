@@ -20,17 +20,15 @@ PRODUCT_MODEL := LG-MS500
 PRODUCT_MANUFACTURER := lge
 
     CDMA_CARRIER_ALPHA := MetroPCS
-    CDMA_CARRIER_NUMERIC := 311660
+    CARRIER_NUMERIC := 310260
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cdma.home.operator.alpha=$(CDMA_CARRIER_ALPHA) \
-    ro.cdma.home.operator.numeric=$(CDMA_CARRIER_NUMERIC) \
-    gsm.sim.operator.alpha=$(CDMA_CARRIER_ALPHA) \
-    gsm.sim.operator.numeric=$(CDMA_CARRIER_NUMERIC) \
-    gsm.operator.alpha=$(CDMA_CARRIER_ALPHA) \
-    gsm.operator.numeric=$(CDMA_CARRIER_NUMERIC) \
+    gsm.sim.operator.alpha=$(CCARRIER_ALPHA) \
+    gsm.sim.operator.numeric=$(CARRIER_NUMERIC) \
+    gsm.operator.alpha=$(CARRIER_ALPHA) \
+    gsm.operator.numeric=$(CARRIER_NUMERIC) \
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="lge/l0_MPCS_US/l0:4.1.2/JZO54K/MS77010f.1360114527:user/release-keys" \
-    PRIVATE_BUILD_DESC="l0_MPCS_US-user 4.1.2 JZO54K MS77010f.1360114527 release-keys"
+    BUILD_FINGERPRINT="MetroPCS/f6_mpcs_tmo_us/f6:4.1.2/JZO54K/MS50012b.1395661880:user/release-keys" \
+    PRIVATE_BUILD_DESC="f6_mpcs_tmo_us-user 4.1.2 JZO54K MS50012b.1395661880 release-keys"
