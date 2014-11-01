@@ -19,11 +19,11 @@ PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-MS500
 PRODUCT_MANUFACTURER := lge
 
-    CDMA_CARRIER_ALPHA := MetroPCS
+    CDMA_CARRIER_ALPHA := MetroPCSLTE
     CARRIER_NUMERIC := 310260
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    gsm.sim.operator.alpha=$(CCARRIER_ALPHA) \
+    gsm.sim.operator.alpha=$(CARRIER_ALPHA) \
     gsm.sim.operator.numeric=$(CARRIER_NUMERIC) \
     gsm.operator.alpha=$(CARRIER_ALPHA) \
     gsm.operator.numeric=$(CARRIER_NUMERIC) \
