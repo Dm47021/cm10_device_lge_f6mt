@@ -1,3 +1,5 @@
+LOCAL_PATH := device/lge/f6mt/prebuilt
+
 # ETC
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/etc/apns-conf.xml:system/etc/apns-conf.xml \
@@ -66,15 +68,11 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b03:system/etc/firmware/modem_fw.b03 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b04:system/etc/firmware/modem_fw.b04 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b05:system/etc/firmware/modem_fw.b05 \
-     $(LOCAL_PATH)/etc/firmware/modem_fw.b06:system/etc/firmware/modem_fw.b06 \
-     $(LOCAL_PATH)/etc/firmware/modem_fw.b07:system/etc/firmware/modem_fw.b07 \
-     $(LOCAL_PATH)/etc/firmware/modem_fw.b08:system/etc/firmware/modem_fw.b08 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b09:system/etc/firmware/modem_fw.b09 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b10:system/etc/firmware/modem_fw.b10 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b11:system/etc/firmware/modem_fw.b11 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b12:system/etc/firmware/modem_fw.b12 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b13:system/etc/firmware/modem_fw.b13 \
-     $(LOCAL_PATH)/etc/firmware/modem_fw.b14:system/etc/firmware/modem_fw.b14 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b15:system/etc/firmware/modem_fw.b15 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b16:system/etc/firmware/modem_fw.b16 \
      $(LOCAL_PATH)/etc/firmware/modem_fw.b23:system/etc/firmware/modem_fw.b23 \
@@ -107,8 +105,8 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/etc/firmware/vidc.mdt:system/etc/firmware/vidc.mdt \
      $(LOCAL_PATH)/etc/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
      $(LOCAL_PATH)/etc/firmware/vidcfw.elf:system/etc/firmware/vidcfw.elf \
-     $(LOCAL_PATH)/etc/firmware/wcd9310_anc.bin:/system/etc/firmware/wcd9310/wcd9310_anc.bin \
-     $(LOCAL_PATH)/etc/firmware/wcd9310_mbhc.bin:/system/etc/firmware/wcd9310/wcd9310_mbhc.bin
+     $(LOCAL_PATH)/etc/firmware/wcd9310/wcd9310_anc.bin:/system/etc/firmware/wcd9310 \
+     $(LOCAL_PATH)/etc/firmware/wcd9310/wcd9310_mbhc.bin:/system/etc/firmware/wcd9310/wcd9310_mbhc.bin
 
 # Widevine Permissions
 PRODUCT_COPY_FILES += \

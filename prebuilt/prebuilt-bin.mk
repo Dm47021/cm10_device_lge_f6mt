@@ -1,3 +1,5 @@
+LOCAL_PATH := device/lge/f6mt/prebuilt
+
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/bin/atd:system/bin/atd \
      $(LOCAL_PATH)/bin/ATFWD-daemon:system/bin/ATFWD-daemon \

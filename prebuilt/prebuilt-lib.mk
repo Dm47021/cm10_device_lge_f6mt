@@ -1,3 +1,4 @@
+LOCAL_PATH := device/lge/f6mt/prebuilt
 
 # EGL
 PRODUCT_COPY_FILES += \
@@ -21,6 +22,7 @@ PRODUCT_COPY_FILES += \
 # LIBS
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/lib/libacdbloader.so:system/lib/libacdbloader.so \
+     $(LOCAL_PATH)/lib/libacdbloader.so:obj/lib/libacdbloader.so \
      $(LOCAL_PATH)/lib/libaudcal.so:system/lib/libaudcal.so \
      $(LOCAL_PATH)/lib/libaudioalsa.so:system/lib/libaudioalsa.so \
      $(LOCAL_PATH)/lib/libc2d2_a3xx.so:system/lib/libc2d2_a3xx.so \

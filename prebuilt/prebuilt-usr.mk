@@ -1,3 +1,5 @@
+LOCAL_PATH := device/lge/f6mt/prebuilt
+
 # ICU
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/usr/icu/icudt48l.dat:system/usr/icu/icudt48l.dat 
@@ -7,7 +9,7 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/usr/idc/melfas-ts.idc:system/usr/idc/melfas-ts.idc \
      $(LOCAL_PATH)/usr/idc/osp3-input.idc:system/usr/idc/osp3-input.idc \
      $(LOCAL_PATH)/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-     $(LOCAL_PATH)/usr/idc/qwerty.idc2:system/usr/idc/qwerty.idc2
+     $(LOCAL_PATH)/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc
 
 # KEYCHARS
 PRODUCT_COPY_FILES += \

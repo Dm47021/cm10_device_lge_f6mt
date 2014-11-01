@@ -1,3 +1,5 @@
+LOCAL_PATH := device/lge/f6mt/prebuilt
+
 # Vendor Files
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/vendor/firmware/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
