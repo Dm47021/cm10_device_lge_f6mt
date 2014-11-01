@@ -41,6 +41,39 @@ TARGET_SCREEN_WIDTH := 540
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ramdisk/fstab.qcom:root/fstab.qcom \
+    $(LOCAL_PATH)/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.rc:root/init.qcom.rc \
+    $(LOCAL_PATH)/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
+    $(LOCAL_PATH)/ramdisk/init.target.rc:root/init.target.rc \
+    $(LOCAL_PATH)/ramdisk/init.fx3.rc:root/init.fx3.rc \
+    $(LOCAL_PATH)/ramdisk/sbin/chargerlogo:root/sbin/chargerlogo \
+    $(LOCAL_PATH)/ramdisk/charger:root/charger \
+    $(LOCAL_PATH)/ramdisk/chargerlogo_res_images-timestamp:root/chargerlogo_res_images-timestamp \
+    $(LOCAL_PATH)/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_0.png:root/res/images/charger/battery_0.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_1.png:root/res/images/charger/battery_1.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_2.png:root/res/images/charger/battery_2.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_3.png:root/res/images/charger/battery_3.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_4.png:root/res/images/charger/battery_4.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_5.png:root/res/images/charger/battery_5.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_charge.png:root/res/images/charger/battery_charge.png \
+    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_fail.png:root/res/images/charger/battery_fail.png 
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+    $(LOCAL_PATH)/recovery/root/init.recovery.rc:recovery/root/init.recovery.rc \
+
 # f6mt vendor blobs
 $(call inherit-product-if-exists, device/lge/f6mt/f6mt-prebuilts.mk)
 
