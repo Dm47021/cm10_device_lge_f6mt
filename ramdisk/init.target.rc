@@ -50,12 +50,6 @@ on init
     setprop vold.decrypt ""
     setprop vold.encrypt_progress ""
 
-on fs
-
-    # GV Theme
-    mkdir /persist-lg/dcm_theme 0771 system system
-    chown system system /persist-lg/dcm_theme
-	chmod 0771 /persist-lg/dcm_theme
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -196,10 +190,6 @@ on boot
 on post-fs
     export_rc /persist/init.cne.rc
     start qcom-post-fs
-    
-#// LGE_UPDATE_S DMS_SYSTEM_GOTA dms-fota@lge.com 2012/11/09
-	start flash_recovery
-#// LGE_UPDATE_E DMS_SYSTEM_GOTA dms-fota@lge.com 2012/11/09
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -294,9 +284,6 @@ on property:init.svc.surfaceflinger=stopped
     stop ppd
     stop hdmid
 
-#on property:ro.board.platform=msm7630_fusion
-#    start usbhub_init
-
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
@@ -324,6 +311,7 @@ service rmt_storage /system/bin/rmt_storage
 
 on property:ro.boot.emmc=true
     start rmt_storage
+
 # LG animated logo
 service bootlogo /sbin/bootlogo.f6
         class main
@@ -398,12 +386,6 @@ service qmuxd /system/bin/qmuxd
 service netmgrd /system/bin/netmgrd
     class main
     disabled
-
-#service sensors /system/bin/sensors.qcom
-#    class late_start
-#    user root
-#    group root
-#    disabled
 
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
@@ -487,28 +469,6 @@ service wiperiface /system/bin/wiperiface
     user gps
     group gps qcom_oncrpc net_raw
     oneshot
-
-#[COM_GNSS::COMMON][S][fx3-gnss@lge.com][2013.01.18][disable gpsone_daemon]
-#service gpsone_daemon /system/bin/gpsone_daemon
-#    class late_start
-#    user gps
-#    group gps qcom_oncrpc inet net_raw
-#    disabled
-#[COM_GNSS::COMMON][E]
-
-#[COM_GNSS::COMMON][S][mc-gnss@lge.com][2012.10.23][disable quipc]
-#service quipc_igsn /system/bin/quipc_igsn
-#    class late_start
-#    user gps
-#    group inet gps
-#    disabled
-
-#service quipc_main /system/bin/quipc_main
-#    class late_start
-#    user gps
-#    group gps net_admin wifi inet
-#    disabled
-#[COM_GNSS::COMMON][E]
 
 #[COM_GNSS::COMMON][S][mc-gnss@lge.com][2012.10.23][disable xtwifi daemon]
 service location_mq /system/bin/location-mq
@@ -686,32 +646,6 @@ on property:service.adb.root=1
     restart adbd
     write /sys/class/android_usb/android0/enable 1
 
-
-# LGBackup SystemService Daemon
-service bnrd /system/bin/bnrd
-    class main
-    socket bnrd stream 660 root system
-    user root
-    group system radio sdcard_rw
-
-
-# LG RCT(Rooting Check Tool) FEATURE
-service rctd /system/bin/rctd
-    class late_start
-    user root
-    group root
-
-# disable MPCS_TMO vendor apks on factory
-service vendor_apks_off /system/bin/sh /system/etc/disable_mpcs_tmo_vendor_apks.sh
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
-on property:ro.boot.mode=factory2
-    start vendor_apks_off
-
 #LGE_UPDATE_S 20130506 choonghyun.jeon@lge.com
 service immvibed_f6_2v /system/bin/immvibed_f6_2v
 	class main
@@ -740,8 +674,6 @@ on property:ro.lge.hw.revision=rev_b
 	start immvibed_f6_3v
 on property:ro.lge.hw.revision=rev_c
 	start immvibed_f6_3v
-	
-#LGE_UPDATE_E 20130506 choonghyun.jeon@lge.com
 
 #LGE_UPDATE_S 20130514 munseon.choi@lge.com
 on property:ro.build.type=user

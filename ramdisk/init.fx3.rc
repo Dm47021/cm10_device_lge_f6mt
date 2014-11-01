@@ -27,8 +27,6 @@
 #
 #
 
-import init.lge.usb.rc
-
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
@@ -90,27 +88,6 @@ on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
    start qcamerasvr
-
------------------------------------------------
-# LGE_CHANGE_S [i_atnt][HieednMenu] Add log service, jjh.jang@lge.com, 2011-08-19
-    mkdir /data/logger 0771 system system
-    chown system system /data/logger
-    chmod 0775 /data/logger
-# LGE_CHANGE_E [i_atnt][HieednMenu] Add log service, jjh.jang@lge.com, 2011-08-19
-
-
-# [KPJT] MC R&D-203, s
-# LED Driver Node Owner ?? system À¸?? ????
-#   chown system system /sys/devices/i2c-2/2-0032/led_pattern
-#   chown system system /sys/devices/i2c-2/2-0032/led_blink
-#   chown system system /sys/devices/i2c-2/2-0032/leds/R/brightness
-#   chown system system /sys/devices/i2c-2/2-0032/leds/G/brightness
-#   chown system system /sys/devices/i2c-2/2-0032/leds/B/brightness
-#   chown system system /sys/devices/i2c-2/2-0032/leds/R/led_current
-#   chown system system /sys/devices/i2c-2/2-0032/leds/G/led_current
-#   chown system system /sys/devices/i2c-2/2-0032/leds/B/led_current
-# [KPJT] MC R&D-203, e
-
 
 # LGE_CHANGE_S, 2012-11-30, donghyuk79.park@lge.com, K-PJT
    chown system system /sys/class/pmic-kpjt/make_patterns/blink_patterns
@@ -405,134 +382,6 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-# LGE_CHANGE_S [i_atnt][HieednMenu] Add log service, jjh.jang@lge.com, 2011-08-19
-# LGE_CHANGE_S, 20120108, HiddenMenu Log_service seungin.choi@lge.com
-service logcat-main /system/bin/logcat -v time -b main -f /data/logger/main.log -n 9 -r 4096
-	class late_start
-	disabled
-	oneshot
-
-on property:persist.service.main.enable=1
-	start logcat-main
-
-on property:persist.service.main.enable=0
-	stop logcat-main
-
-service logcat-system /system/bin/logcat -v time -b system -f /data/logger/system.log -n 4 -r 4096
-	class late_start
-	disabled
-	oneshot
-
-on property:persist.service.system.enable=1
-	start logcat-system
-
-# [START_LGE_HiddenMenu] , ADD, sungkyoung.kim ,2012-03-23 , change command from "start" to "stop"
-on property:persist.service.system.enable=0
-	stop logcat-system
-#	start logcat-system
-# [END_LGE_HiddenMenu] , ADD, sungkyoung.kim ,2012-03-23 , change command from "start" to "stop"
-
-service logcat-radio /system/bin/logcat -v time -b radio -f /data/logger/radio.log -n 4 -r 4096
-	class late_start
-	disabled
-	oneshot
-
-on property:persist.service.radio.enable=1
-	start logcat-radio
-
-on property:persist.service.radio.enable=0
-	stop logcat-radio
-
-service logcat-events /system/bin/logcat -v time -b events -f /data/logger/events.log -n 4 -r 4096
-	class late_start
-	disabled
-	oneshot
-
-on property:persist.service.events.enable=1
-	start logcat-events
-
-on property:persist.service.events.enable=0
-	stop logcat-events
-
-service logcat-kernel /system/bin/sh /system/etc/save_kernel_log.sh
-    class late_start
-	disabled
-	oneshot
-
-on property:persist.service.kernel.enable=1
-	start logcat-kernel
-
-on property:persist.service.kernel.enable=0
-	stop logcat-kernel
-
-# LGE_CHANGE_S, taewann.kim@lge.com, HiddenMenu, make packet log dummy file permission 666   
-service make-packetlog /system/bin/sh /system/etc/make_packet_log.sh   
-	class late_start  
-	disabled  
-	oneshot  
-# LGE_CHANGE_E, taewann.kim@lge.com, HiddenMenu, make packet log dummy file permission 666
-
-# LGE_CHANGE_S, [LGE_DATA][TCP_DUMP], gilchan.park@lge.com, 2012-02-16
-service logging_packet /system/xbin/tcpdump -i any -p -C 4 -W 10 -Z root -s 0 -w /data/logger/packet.pcap
-	class late_start
-	disabled
-	oneshot
-
-on property:persist.service.logging_packet=1
-	start make-packetlog 
-	start logging_packet
-
-on property:persist.service.logging_packet=0
-	start make-packetlog 
-	stop logging_packet
-# LGE_CHANGE_E, [LGE_DATA][TCP_DUMP], gilchan.park@lge.com, 2012-02-16
-
-#LGE_CHANGE_S seungin.choi@lge.com, HiddenMenu, Loading LogService Properties
-service cur_prop_val /system/bin/sh /data/logger/LogPropValue.sh
-	class late_start
-	user system
-	oneshot
-#LGE_CHANGE_E, seungin.choi@lge.com, HiddenMenu, Loading LogService Properties
-
-service log_main_ats /system/bin/logcat -v time -b main -f /storage/external_SD/main.log 
-	class late_start
-	disabled
-	oneshot
-
-service log_system_ats /system/bin/logcat -v time -b system -f /storage/external_SD/system.log
-	class late_start
-	disabled
-	oneshot
-
-service log_radio_ats /system/bin/logcat -v time -b radio -f /storage/external_SD/radio.log
-	class late_start
-	disabled
-	oneshot
-
-service log_events_ats /system/bin/logcat -v time -b events -f /storage/external_SD/events.log
-	class late_start
-	disabled
-	oneshot
-
-service log_kernel_ats /system/bin/sh /system/etc/save_kernel_log_ats.sh
-    class late_start
-	disabled
-	oneshot
-
-on property:persist.service.ats.enable=true
-	start log_main_ats
-	start log_system_ats
-	start log_radio_ats
-	start log_events_ats
-	start log_kernel_ats
-
-on property:persist.service.ats.enable=false
-	stop log_main_ats
-	stop log_system_ats
-	stop log_radio_ats
-	stop log_events_ats
-	stop log_kernel_ats
-
 service thermal_enable /system/bin/thermald --config-file /system/etc/thermald-8930.conf
 	class late_start
 	disabled
@@ -551,63 +400,6 @@ on property:persist.service.ther.enable=false
 
 on property:persist.service.usb_ther=true
 on property:persist.service.usb_ther=false
-
-#LGE_CHANGE_S 2012.04 lg-msp@lge.com MTS TEAM
-service mtsd /system/bin/mtsd
-	class late_start
-	oneshot
-	socket mtsd.port stream 660 system system
-
-service mtsd_kmsg /system/bin/mtsd_kmsg
-	class late_start
-	disabled
-	oneshot
-
-service mtsd_main /system/bin/mtsd_logcat_main
-	class late_start
-	disabled
-	oneshot
-
-service mtsd_events /system/bin/mtsd_logcat_events
-	class late_start
-	disabled
-	oneshot
-
-service mtsd_radio /system/bin/mtsd_logcat_radio
-	class late_start
-	disabled
-	oneshot
-
-service mtsd_system /system/bin/mtsd_logcat_system
-	class late_start
-	disabled
-	oneshot
-
-service mtsd_fmgr /system/bin/mtsd_file_manager
-	class late_start
-	oneshot
-
-service mtsd_hist /system/bin/mtsd_logcat_filter
-	class late_start
-	disabled
-	oneshot
-
-on property:sys.mts.work=1
-	start mtsd_main
-	start mtsd_kmsg
-	start mtsd_events
-	start mtsd_radio
-	start mtsd_system
-	start mtsd_hist
-
-on property:sys.mts.work=0
-	stop mtsd_main
-	stop mtsd_kmsg
-	stop mtsd_events
-	stop mtsd_radio
-	stop mtsd_system
-	stop mtsd_hist
-#LGE_CHANGE_E 2012.04 lg-msp@lge.com MTS TEAM
 
 # 2013-04-16 SungKyoung-Kim(sungkyoung.kim@lge.com) Add Fake_Battery to maintain battery fake mode after reboot [START]
 service fake_batt /system/bin/sh /data/fake_batt.sh	
