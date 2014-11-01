@@ -85,8 +85,8 @@ try:
 except ImportError:
   from sha import sha as sha1
 
-import l1m_common as common
-import l1m_edify_generator as edify_generator
+import f6mt_common as common
+import f6mt_edify_generator as edify_generator
 
 
 OPTIONS = common.OPTIONS
