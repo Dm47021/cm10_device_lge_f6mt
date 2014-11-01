@@ -117,6 +117,125 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 
+# System Prop for F6MT
+PRODUCT_PROPERTY_OVERRIDES += \
+     rild.libpath=/system/lib/libril-qc-qmi-1.so \
+     rild.libargs=-d /dev/smd0 \
+     persist.rild.nitz_plmn= \
+     persist.rild.nitz_long_ons_0= \
+     persist.rild.nitz_long_ons_1= \
+     persist.rild.nitz_long_ons_2= \
+     persist.rild.nitz_long_ons_3= \
+     persist.rild.nitz_short_ons_0= \
+     persist.rild.nitz_short_ons_1= \
+     persist.rild.nitz_short_ons_2= \
+     persist.rild.nitz_short_ons_3= \
+     ril.subscription.types=NV,RUIM \
+     DEVICE_PROVISIONED=1 \
+     debug.sf.hw=1 \
+     debug.egl.hw=1 \
+     debug.composition.type=gpu \
+     dalvik.vm.heapsize=36m \
+     debug.mdpcomp.maxlayer=3 \
+     debug.mdpcomp.logs=0 \
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.hdmi.enable=false \
+     lpa.decode=true \
+     lpa.use-stagefright=true 
+
+#system props for the MM modules
+PRODUCT_PROPERTY_OVERRIDES += \
+     media.stagefright.enable-player=true \
+     media.stagefright.enable-http=true \
+     media.stagefright.enable-aac=true \
+     media.stagefright.enable-qcp=true \
+     media.stagefright.enable-fma2dp=true \
+     media.stagefright.enable-scan=true \
+     mmp.enable.3g2=true
+
+#
+# system props for the data modules
+#
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.use_data_netmgrd=true 
+
+#system props for time-services
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.timed.enable=true
+
+# System props for audio
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.audio.fluence.mode=endfire \
+     persist.audio.vr.enable=false \
+     persist.audio.voice.clarity=none \
+     af.resampler.quality=255 \
+     mpq.audio.decode=false 
+
+#
+# system prop for opengles version
+#
+# 131072 is decimal for 0x20000 to report version 2
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.opengles.version=131072]
+
+#system prop for switching gps driver to qmi
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.gps.qmienabled=true
+
+# System props for telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+     telephony.lteOnCdmaDevice=1 \
+     ro.ril.transmitpower=true \
+     persist.radio.apm_sim_not_pwdn=1 \
+     persist.radio.data_no_toggle=1 \
+     telephony.lteOnCdmaDevice=0 \
+     persist.gsm.sms.forcegsm7=0 \
+     ro.radio.GWLdevice=1 \
+     ro.radio.topreviousmode=disable \
+     persist.radio.lte_vrte_ltd=1 \
+     
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.hwui.text_cache_width=2048 
+
+#snapdragon value add features
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.qcom.audio.ssr=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     service.brcm.bt.wbs=1 \
+     service.brcm.bt.aptx=0 \
+     service.brcm.bt.3way_support=true
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.build.target_operator=TMO \
+     ro.build.target_operator_ext=MPCS_TMO \
+     ro.build.target_country=US \
+     ro.sf.lcd_density=240 \
+     ime_vibration_pattern=0:20 \
+     wlan.chip.vendor=brcm \
+     wlan.chip.version=bcm4330 \
+     keyguard.no_require_sim=true \
+     ro.vendor.extension_library=/system/lib/libqc-opt.so \
+     ro.nfc.port=I2C \
+     dalvik.vm.dexopt-flags=m=y \
+     net.bt.name=Android
+     
+     
+     
+     
+     
+
+     
+
+
+     
+
+
 
 
 
