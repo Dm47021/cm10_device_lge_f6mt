@@ -37,6 +37,7 @@ TARGET_KERNEL_SOURCE         := kernel/lge/f6mt
 TARGET_KERNEL_CONFIG         := cm_f6mt_defconfig
 TARGET_SPECIFIC_HEADER_PATH := device/lge/f6mt/include
 TARGET_NO_INITLOGO := true
+TARGET_RECOVERY_INITRC := device/lge/f6mt/recovery/root/init.recovery.rc
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -65,9 +66,6 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 BOARD_EGL_CFG := device/lge/f6mt/proprietary/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DQCOM_ROTATOR_KERNEL_FORMATS
-
-# GPS
-BOARD_HAVE_NEW_QC_GPS := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
