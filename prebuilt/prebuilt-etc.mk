@@ -1,6 +1,7 @@
 # ETC
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/etc/apns-conf.xml:system/etc/apns-conf.xml \
+     $(LOCAL_PATH)/etc/gps.conf:system/etc/gps.conf \
      $(LOCAL_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
      $(LOCAL_PATH)/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
      $(LOCAL_PATH)/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
