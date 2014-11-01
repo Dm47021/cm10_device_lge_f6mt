@@ -26,7 +26,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-service lge-usb-sh /system/bin/sh /init.lge.usb.sh
+service lge-usb-sh /system/bin/sh /init.qcom.usb.sh
     class core
     user root
     oneshot
