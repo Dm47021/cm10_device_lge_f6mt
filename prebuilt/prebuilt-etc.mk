@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/etc/firmware/vidc.mdt:system/etc/firmware/vidc.mdt \
      $(LOCAL_PATH)/etc/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
      $(LOCAL_PATH)/etc/firmware/vidcfw.elf:system/etc/firmware/vidcfw.elf \
-     $(LOCAL_PATH)/etc/firmware/wcd9310/wcd9310_anc.bin:/system/etc/firmware/wcd9310 \
+     $(LOCAL_PATH)/etc/firmware/wcd9310/wcd9310_anc.bin:/system/etc/firmware/wcd9310/wcd9310_anc.bin \
      $(LOCAL_PATH)/etc/firmware/wcd9310/wcd9310_mbhc.bin:/system/etc/firmware/wcd9310/wcd9310_mbhc.bin
 
 # Widevine Permissions
