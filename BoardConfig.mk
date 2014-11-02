@@ -109,3 +109,6 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/lge/f6mt/releasetools/f6mt
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := LGMS500,f6mt
+
+# DEX Optimization
+WITH_DEXPREOPT := true

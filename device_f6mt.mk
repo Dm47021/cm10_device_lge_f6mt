@@ -79,6 +79,7 @@ $(call inherit-product-if-exists, device/lge/f6mt/f6mt-prebuilts.mk)
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
+    e2fsck \
     setup_fs
 
 # Audio
@@ -263,37 +264,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
      dalvik.vm.dexopt-flags=m=y \
      net.bt.name=Android
 
-# For userdebug builds
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-     
-     
-     
-     
-     
+# Insecure boot
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.adb.enable=1
 
      
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
