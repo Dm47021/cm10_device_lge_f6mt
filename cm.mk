@@ -16,7 +16,7 @@ $(call inherit-product, device/lge/f6mt/device_f6mt.mk)
 PRODUCT_DEVICE := f6mt
 PRODUCT_NAME := cm_f6mt
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-MS500
+PRODUCT_MODEL := LGMS500
 PRODUCT_MANUFACTURER := lge
 
     CARRIER_ALPHA   := MetroPCSLTE

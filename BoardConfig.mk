@@ -106,3 +106,6 @@ TARGET_BOOTANIMATION_PRELOAD := true
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/lge/f6mt/releasetools/f6mt_ota_from_target_files
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := LGMS500,f6mt

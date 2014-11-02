@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ifneq ($(filter l1m msm8960,$(TARGET_DEVICE)),)
-
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -29,5 +27,4 @@ LOCAL_MODULE_OWNER := lge
 LOCAL_MODULE := bdAddrLoader
 include $(BUILD_EXECUTABLE)
 
-endif
 
